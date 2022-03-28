@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol SearchResultViewDelegate {
+    func didSendQuery(query: String)
+}
+
 class SearchResultsView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textFieldView: UITextField!
     
-    var delegate: CellDelegate?
+    var cellDelegate: CellDelegate?
+    var delegate: SearchResultViewDelegate?
     
     var model: [Item] = []
     
@@ -23,16 +29,25 @@ class SearchResultsView: UIView {
     
     func configureView() {
         configureTableView()
+        configureTextField()
     }
     
-    func reloadTableView() {
-        self.tableView.reloadData()
+    func refreshView(with model: [Item]) {
+        self.model = model
+        reloadTableView()
+    }
+    
+    private func reloadTableView() {
+        tableView.reloadData()
+    }
+    
+    private func configureTextField() {
+        textFieldView.delegate = self
     }
     
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         tableView.register(CompactTableViewCell.nib(), forCellReuseIdentifier: CompactTableViewCell.identifier)
     }
@@ -58,10 +73,22 @@ extension SearchResultsView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension SearchResultsView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return false }
+        
+        if !text.isEmpty {
+            delegate?.didSendQuery(query: text)
+            return true
+        }
+        return false
+    }
+}
+
+
 extension SearchResultsView: CellDelegate {
     func onCellTap(title: String) {
-        delegate?.onCellTap(title: title)
+        cellDelegate?.onCellTap(title: title)
     }
-    
-    
 }

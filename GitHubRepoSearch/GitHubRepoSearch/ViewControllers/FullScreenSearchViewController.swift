@@ -22,6 +22,7 @@ class FullScreenSearchViewController: UIViewController {
         view.addSubview(searchView)
         
         
+        searchView.cellDelegate = self
         searchView.delegate = self
         
     }
@@ -32,6 +33,10 @@ extension FullScreenSearchViewController: CellDelegate {
     func onCellTap(title: String) {
         print(title)
     }
-    
-    
+}
+
+extension FullScreenSearchViewController: SearchResultViewDelegate {
+    func didSendQuery(query: String) {
+        
+    }
 }
