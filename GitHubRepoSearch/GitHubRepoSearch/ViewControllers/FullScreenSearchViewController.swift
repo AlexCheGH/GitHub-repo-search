@@ -9,10 +9,29 @@ import UIKit
 
 class FullScreenSearchViewController: UIViewController {
 
+    let searchView = SearchResultsView.loadViewFromNib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        searchView.configureView()
+        searchView.backgroundColor = .blue
+        
+        searchView.frame.size = view.frame.size
+        view.addSubview(searchView)
+        
+        
+        searchView.delegate = self
+        
     }
+    
+}
+
+extension FullScreenSearchViewController: CellDelegate {
+    func onCellTap(title: String) {
+        print(title)
+    }
+    
     
 }
