@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SearchResultsView" id="iN0-l3-epB" customClass="SearchResultsView" customModule="GitHubRepoSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g1a-tw-nHk">
+                    <rect key="frame" x="0.0" y="87" width="414" height="775"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-JR-QJZ">
+                    <rect key="frame" x="8" y="44" width="398" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="zps-tn-FkX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g1a-tw-nHk" secondAttribute="bottom" id="0wP-r1-bSa"/>
+                <constraint firstItem="a7I-JR-QJZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Lcu-3U-mIQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a7I-JR-QJZ" secondAttribute="trailing" constant="8" id="YMX-u0-jPI"/>
+                <constraint firstItem="g1a-tw-nHk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZSh-7a-OJ9"/>
+                <constraint firstItem="g1a-tw-nHk" firstAttribute="top" secondItem="a7I-JR-QJZ" secondAttribute="bottom" constant="8" id="tgM-rF-wy6"/>
+                <constraint firstItem="a7I-JR-QJZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vAd-xv-dIH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g1a-tw-nHk" secondAttribute="trailing" id="w9a-ie-mta"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="g1a-tw-nHk" id="Dv0-pB-1sQ"/>
+                <outlet property="textFieldView" destination="a7I-JR-QJZ" id="QN0-0j-HRM"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
