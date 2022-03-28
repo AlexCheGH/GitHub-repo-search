@@ -19,6 +19,8 @@ class SearchResultsView: UIView {
     var cellDelegate: CellDelegate?
     var delegate: SearchResultViewDelegate?
     
+    var tableViewHeight: CGFloat = 0
+    
     var model: [Item] = []
     
     static func loadViewFromNib() -> SearchResultsView {
@@ -28,6 +30,9 @@ class SearchResultsView: UIView {
     }
     
     func configureView() {
+        
+        tableViewHeight = tableView.bounds.size.height
+        
         configureTableView()
         configureTextField()
     }
@@ -46,10 +51,18 @@ class SearchResultsView: UIView {
     }
     
     private func configureTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
         
-        tableView.register(CompactTableViewCell.nib(), forCellReuseIdentifier: CompactTableViewCell.identifier)
+        if !model.isEmpty {
+            self.tableView.bounds.size.height = self.tableViewHeight
+            
+            tableView.delegate = self
+            tableView.dataSource = self
+            
+            tableView.register(CompactTableViewCell.nib(), forCellReuseIdentifier: CompactTableViewCell.identifier)}
+        else {
+            self.tableView.bounds.size.height = 0
+        }
+        
     }
     
 }
