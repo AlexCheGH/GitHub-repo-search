@@ -23,7 +23,6 @@
 		A58EC30827F1F99F007566DC /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30727F1F99F007566DC /* RepositoryManager.swift */; };
 		A58EC30B27F20210007566DC /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30A27F20210007566DC /* ViewControllerFactory.swift */; };
 		A58EC30E27F203AF007566DC /* DropDownSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30D27F203AF007566DC /* DropDownSearchViewController.swift */; };
-		A58EC31027F2083C007566DC /* FullScreenSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30F27F2083C007566DC /* FullScreenSearchViewController.swift */; };
 		A58EC31227F20B19007566DC /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC31127F20B19007566DC /* SearchResultsView.swift */; };
 		A58EC31527F20B66007566DC /* SearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58EC31427F20B66007566DC /* SearchResultsView.xib */; };
 		A58EC31F27F215A1007566DC /* CompactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC31D27F215A1007566DC /* CompactTableViewCell.swift */; };
@@ -53,7 +52,6 @@
 		A58EC30727F1F99F007566DC /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
 		A58EC30A27F20210007566DC /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		A58EC30D27F203AF007566DC /* DropDownSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownSearchViewController.swift; sourceTree = "<group>"; };
-		A58EC30F27F2083C007566DC /* FullScreenSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenSearchViewController.swift; sourceTree = "<group>"; };
 		A58EC31127F20B19007566DC /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
 		A58EC31427F20B66007566DC /* SearchResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsView.xib; sourceTree = "<group>"; };
 		A58EC31D27F215A1007566DC /* CompactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				A58EC2DF27F1CE7E007566DC /* ViewController.swift */,
-				A58EC30F27F2083C007566DC /* FullScreenSearchViewController.swift */,
 				A58EC30D27F203AF007566DC /* DropDownSearchViewController.swift */,
 			);
 			path = ViewControllers;
@@ -270,7 +267,6 @@
 				A58EC30627F1E971007566DC /* RawRepositoriesModel.swift in Sources */,
 				A58EC2DC27F1CE7E007566DC /* AppDelegate.swift in Sources */,
 				A58EC2FF27F1DDAB007566DC /* DataLoader.swift in Sources */,
-				A58EC31027F2083C007566DC /* FullScreenSearchViewController.swift in Sources */,
 				A58EC2FC27F1D324007566DC /* NetworkManager.swift in Sources */,
 				A58EC2F927F1CF86007566DC /* Localization.swift in Sources */,
 				A58EC32327F221B7007566DC /* CellDelegate.swift in Sources */,

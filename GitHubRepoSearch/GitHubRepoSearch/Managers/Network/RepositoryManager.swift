@@ -6,19 +6,34 @@
 //
 
 import Foundation
+import Combine
 
 class RepositoryManager {
     
-    var model: RepositoryRequest?
+    @Published private var model: RepositoryRequest?
     
     private var networkManager = NetworkManager()
     
-    init(matching: String, sortedBy: Sorting, order: Order, perPage: Int, pageNumber: Int) {
+    
+    var modelPublisher: AnyPublisher <RepositoryRequest?, Never> {
+        return $model.map{ $0 }
+        .eraseToAnyPublisher()
+    }
+
+    func refreshModel(matching: String, sortedBy: Sorting, order: Order, perPage: Int, pageNumber: Int) {
         networkManager.findRepositories(matching: matching, sortedBy: sortedBy, order: order, perPage: perPage, pageNumber: pageNumber) {
             value in
             self.model = value
-            print(self.model)
         }
+    }
+    
+    func getRepoLink(for repoTitle: String?) -> String? {
+        let link = model?.items?.reduce(into: "") {
+            if $1.name == repoTitle {
+                $0 = $1.htmlURL
+            }
+        }
+        return link
     }
     
 }

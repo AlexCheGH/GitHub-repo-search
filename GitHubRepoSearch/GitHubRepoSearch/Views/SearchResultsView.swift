@@ -13,6 +13,8 @@ protocol SearchResultViewDelegate {
 
 class SearchResultsView: UIView {
     
+    @IBOutlet weak var bottonConstr: NSLayoutConstraint!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textFieldView: UITextField!
     
@@ -40,6 +42,7 @@ class SearchResultsView: UIView {
     func refreshView(with model: [Item]) {
         self.model = model
         reloadTableView()
+        configureTableView()
     }
     
     private func reloadTableView() {
@@ -50,19 +53,22 @@ class SearchResultsView: UIView {
         textFieldView.delegate = self
     }
     
-    private func configureTableView() {
+    func configureTableView() {
         
         if !model.isEmpty {
-            self.tableView.bounds.size.height = self.tableViewHeight
-            
             tableView.delegate = self
             tableView.dataSource = self
             
-            tableView.register(CompactTableViewCell.nib(), forCellReuseIdentifier: CompactTableViewCell.identifier)}
-        else {
-            self.tableView.bounds.size.height = 0
+            tableView.register(CompactTableViewCell.nib(), forCellReuseIdentifier: CompactTableViewCell.identifier)
+            
+            UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut) {
+                self.bottonConstr.constant = 0
+                self.layoutIfNeeded()
+            }
+        } else {
+            self.bottonConstr.constant = 1000
+            self.layoutIfNeeded()
         }
-        
     }
     
 }
