@@ -5,14 +5,13 @@ class CompactTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starsLabel: UILabel!
-    
+    @IBOutlet weak var tapZone: UIView!
     
     var delegate: CellDelegate?
     
     private var title: String?
     private var ownerName: String?
     
-        
     static let identifier = "CompactTableViewCell"
     
     static func nib() -> UINib {
@@ -21,26 +20,27 @@ class CompactTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
- 
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         
     }
     
     
     func configureCell(title: String?, ownerName: String?) {
-        
         self.title = title
         self.ownerName = ownerName
         
-        setupLabels(title: title, ownerName: ownerName)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onCellTap))
+        tapZone.addGestureRecognizer(tap)
         
+        setupLabels(title: title, ownerName: ownerName)
     }
     
-    @objc func onCellTap(){
+    
+    @objc private func onCellTap() {
         guard let title = title else { return }
         delegate?.onCellTap(title: title)
     }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,31 +17,45 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g1a-tw-nHk">
-                    <rect key="frame" x="0.0" y="87" width="414" height="775"/>
+                    <rect key="frame" x="0.0" y="66" width="414" height="796"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-JR-QJZ">
-                    <rect key="frame" x="8" y="44" width="398" height="35"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5L-uD-TQ6">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-JR-QJZ">
+                            <rect key="frame" x="8" y="8" width="398" height="35"/>
+                            <color key="tintColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="zps-tn-FkX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="zps-tn-FkX"/>
+                        <constraint firstAttribute="trailing" secondItem="a7I-JR-QJZ" secondAttribute="trailing" constant="8" id="5gf-QS-1wc"/>
+                        <constraint firstItem="a7I-JR-QJZ" firstAttribute="leading" secondItem="a5L-uD-TQ6" secondAttribute="leading" constant="8" id="9ga-rG-biA"/>
+                        <constraint firstItem="a7I-JR-QJZ" firstAttribute="top" secondItem="a5L-uD-TQ6" secondAttribute="top" constant="8" id="MlY-eI-dxN"/>
+                        <constraint firstAttribute="bottom" secondItem="a7I-JR-QJZ" secondAttribute="bottom" constant="8" id="yBU-VY-svt"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g1a-tw-nHk" secondAttribute="bottom" id="0wP-r1-bSa"/>
-                <constraint firstItem="a7I-JR-QJZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Lcu-3U-mIQ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a7I-JR-QJZ" secondAttribute="trailing" constant="8" id="YMX-u0-jPI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g1a-tw-nHk" secondAttribute="bottom" priority="999" id="0wP-r1-bSa"/>
+                <constraint firstItem="g1a-tw-nHk" firstAttribute="top" secondItem="a5L-uD-TQ6" secondAttribute="bottom" constant="15" id="9xC-0z-Pn1"/>
+                <constraint firstItem="a5L-uD-TQ6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LeS-gj-GiO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a5L-uD-TQ6" secondAttribute="trailing" id="Nbi-8K-OLM"/>
+                <constraint firstItem="a5L-uD-TQ6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WmV-xY-yu9"/>
                 <constraint firstItem="g1a-tw-nHk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZSh-7a-OJ9"/>
-                <constraint firstItem="g1a-tw-nHk" firstAttribute="top" secondItem="a7I-JR-QJZ" secondAttribute="bottom" constant="8" id="tgM-rF-wy6"/>
-                <constraint firstItem="a7I-JR-QJZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vAd-xv-dIH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g1a-tw-nHk" secondAttribute="trailing" id="w9a-ie-mta"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottonConstr" destination="0wP-r1-bSa" id="71m-Uz-VsF"/>
                 <outlet property="tableView" destination="g1a-tw-nHk" id="Dv0-pB-1sQ"/>
                 <outlet property="textFieldView" destination="a7I-JR-QJZ" id="QN0-0j-HRM"/>
             </connections>
@@ -48,6 +63,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

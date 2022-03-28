@@ -34,17 +34,26 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ide-rY-5pv">
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="246"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ide-rY-5pv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1Xg-j8-BJP"/>
+                    <constraint firstAttribute="trailing" secondItem="ide-rY-5pv" secondAttribute="trailing" id="9pj-gP-Q3g"/>
+                    <constraint firstItem="ide-rY-5pv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Lo7-N7-A6q"/>
                     <constraint firstAttribute="trailing" secondItem="yaF-UE-WrB" secondAttribute="trailing" constant="8" id="Mda-Xb-KND"/>
                     <constraint firstItem="yaF-UE-WrB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dTk-kW-kTs"/>
                     <constraint firstItem="yaF-UE-WrB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eZT-Zr-3Tc"/>
                     <constraint firstAttribute="bottom" secondItem="yaF-UE-WrB" secondAttribute="bottom" id="jKe-2x-RkN"/>
+                    <constraint firstAttribute="bottom" secondItem="ide-rY-5pv" secondAttribute="bottom" id="kE7-Su-abp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="starsLabel" destination="llc-bN-eCa" id="WWl-4w-yfA"/>
+                <outlet property="tapZone" destination="ide-rY-5pv" id="9lo-7s-qoa"/>
                 <outlet property="titleLabel" destination="LRM-iO-yW5" id="p5S-FI-8Xg"/>
             </connections>
             <point key="canvasLocation" x="147.10144927536234" y="149.33035714285714"/>
