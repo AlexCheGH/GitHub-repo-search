@@ -8,34 +8,36 @@
 import Foundation
 
 class NetworkManager {
-    
     func findRepositories(matching query: String,
                           sortedBy sorting: Sorting,
                           order: Order,
-                          perPage: Int = 30,
-                          pageNumber: Int = 1) {
+                          perPage: Int = 10,
+                          pageNumber:
+                          Int = 1,
+                          completion: @escaping (RepositoryRequest?) -> Void ) {
         
         let dataLoader = DataLoader()
-        dataLoader.request(.search(matching: query,
-                                   sortedBy: sorting,
-                                   order: order,
-                                   perPage: perPage,
-                                   pageNumber: pageNumber)) { result in
+        let endpoint = Endpoint.search(matching: query, sortedBy: sorting, order: order, perPage: perPage, pageNumber: pageNumber)
+        
+        dataLoader.request(endpoint) { result in
             
             switch result {
             case .failure(.urlIsNotValid):
-                print("Oink!")
-            case .failure(.bonk):
-                print("Bonk!")
+                print("URL is not valid. Check the URL.")
             case .success(let data):
-                
-                let decoder = JSONDecoder()
-                let search = try? decoder.decode(RepositoryRequest.self, from: data)
-                
-                
-                
+                let result = self.decode(data)
+                completion(result)
+            case .failure(.wrongMap):
+                print("An error occured when trying to map the result.")
             }
         }
+    }
+    
+    private func decode(_ data: Data) -> RepositoryRequest? {
+        let decoder = JSONDecoder()
+        let result = try? decoder.decode(RepositoryRequest.self, from: data)
+        
+        return result
     }
 }
 
@@ -46,5 +48,5 @@ enum Result<Value, Error: Swift.Error> {
 
 enum NetworkError: Error {
     case urlIsNotValid
-    case bonk
+    case wrongMap
 }

@@ -15,7 +15,7 @@ class DataLoader {
 
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
-            let result = data.map(Result.success) ?? .failure(NetworkError.bonk)
+            let result = data.map(Result.success) ?? .failure(NetworkError.wrongMap)
             handler(result)
             
         }
