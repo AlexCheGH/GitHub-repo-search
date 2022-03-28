@@ -28,6 +28,7 @@
 		A58EC31F27F215A1007566DC /* CompactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC31D27F215A1007566DC /* CompactTableViewCell.swift */; };
 		A58EC32027F215A1007566DC /* CompactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58EC31E27F215A1007566DC /* CompactTableViewCell.xib */; };
 		A58EC32327F221B7007566DC /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32227F221B7007566DC /* CellDelegate.swift */; };
+		A58EC32527F2599E007566DC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32427F2599E007566DC /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		A58EC31D27F215A1007566DC /* CompactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactTableViewCell.swift; sourceTree = "<group>"; };
 		A58EC31E27F215A1007566DC /* CompactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactTableViewCell.xib; sourceTree = "<group>"; };
 		A58EC32227F221B7007566DC /* CellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
+		A58EC32427F2599E007566DC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		A58EC30C27F20384007566DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A58EC32427F2599E007566DC /* AlertViewController.swift */,
 				A58EC2DF27F1CE7E007566DC /* ViewController.swift */,
 				A58EC30D27F203AF007566DC /* DropDownSearchViewController.swift */,
 			);
@@ -275,6 +278,7 @@
 				A58EC2DE27F1CE7E007566DC /* SceneDelegate.swift in Sources */,
 				A58EC30427F1E66A007566DC /* Model.swift in Sources */,
 				A58EC30827F1F99F007566DC /* RepositoryManager.swift in Sources */,
+				A58EC32527F2599E007566DC /* AlertViewController.swift in Sources */,
 				A58EC30B27F20210007566DC /* ViewControllerFactory.swift in Sources */,
 				A58EC31F27F215A1007566DC /* CompactTableViewCell.swift in Sources */,
 			);

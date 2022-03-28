@@ -6,9 +6,17 @@
   
 */
 
+//Labels
 "git_hub" = "GitHub";
 "search" = "Search";
+"alert" = "Alert";
 
 //Buttons
 "drop_down_menu_button" = "Drop down search";
 "exit_button" = "Exit";
+"open" = "Open";
+"cancel" = "Cancel";
+
+//Alert messages
+
+"external_link_prompt" = "Are you sure you want to open the link?";
