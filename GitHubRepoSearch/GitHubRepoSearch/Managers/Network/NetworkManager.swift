@@ -9,10 +9,18 @@ import Foundation
 
 class NetworkManager {
     
-    func findRepositories(matching query: String, sortedBy sorting: Sorting) {
+    func findRepositories(matching query: String,
+                          sortedBy sorting: Sorting,
+                          order: Order,
+                          perPage: Int = 30,
+                          pageNumber: Int = 1) {
         
         let dataLoader = DataLoader()
-        dataLoader.request(.search(matching: query, sortedBy: sorting)) { result in
+        dataLoader.request(.search(matching: query,
+                                   sortedBy: sorting,
+                                   order: order,
+                                   perPage: perPage,
+                                   pageNumber: pageNumber)) { result in
             
             switch result {
             case .failure(.urlIsNotValid):
@@ -20,25 +28,16 @@ class NetworkManager {
             case .failure(.bonk):
                 print("Bonk!")
             case .success(let data):
-                print(data)
+                
+                let decoder = JSONDecoder()
+                let search = try? decoder.decode(RepositoryRequest.self, from: data)
+                
+                
+                
             }
         }
     }
 }
-
-enum Sorting: String {
-    case numberOfStars = "stars"
-    case numberOfForks = "forks"
-    case recency = "updated"
-}
-
-//Default: desc; ignored if there's no Sorting
-enum Order: String {
-    case descending = "desc"
-    case ascending = "asc"
-    
-}
-
 
 enum Result<Value, Error: Swift.Error> {
     case success(Value)

@@ -19,6 +19,7 @@ class DataLoader {
             handler(result)
             
         }
+        print(url)
         task.resume()
     }
 }

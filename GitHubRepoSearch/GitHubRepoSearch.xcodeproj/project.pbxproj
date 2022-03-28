@@ -18,6 +18,8 @@
 		A58EC2FC27F1D324007566DC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC2FB27F1D324007566DC /* NetworkManager.swift */; };
 		A58EC2FF27F1DDAB007566DC /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC2FE27F1DDAB007566DC /* DataLoader.swift */; };
 		A58EC30127F1DE3F007566DC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30027F1DE3F007566DC /* Endpoint.swift */; };
+		A58EC30427F1E66A007566DC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30327F1E66A007566DC /* Model.swift */; };
+		A58EC30627F1E971007566DC /* RawRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A58EC2FB27F1D324007566DC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A58EC2FE27F1DDAB007566DC /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		A58EC30027F1DE3F007566DC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A58EC30327F1E66A007566DC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRepositoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				A58EC2DB27F1CE7E007566DC /* AppDelegate.swift */,
 				A58EC2EF27F1CECB007566DC /* Localizations */,
 				A58EC2DD27F1CE7E007566DC /* SceneDelegate.swift */,
+				A58EC30227F1E661007566DC /* Model */,
 				A58EC2FA27F1D31B007566DC /* Managers */,
 				A58EC2DF27F1CE7E007566DC /* ViewController.swift */,
 				A58EC2E127F1CE7E007566DC /* Main.storyboard */,
@@ -107,6 +112,15 @@
 				A58EC30027F1DE3F007566DC /* Endpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A58EC30227F1E661007566DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A58EC30327F1E66A007566DC /* Model.swift */,
+				A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +198,13 @@
 			files = (
 				A58EC30127F1DE3F007566DC /* Endpoint.swift in Sources */,
 				A58EC2E027F1CE7E007566DC /* ViewController.swift in Sources */,
+				A58EC30627F1E971007566DC /* RawRepositoriesModel.swift in Sources */,
 				A58EC2DC27F1CE7E007566DC /* AppDelegate.swift in Sources */,
 				A58EC2FF27F1DDAB007566DC /* DataLoader.swift in Sources */,
 				A58EC2FC27F1D324007566DC /* NetworkManager.swift in Sources */,
 				A58EC2F927F1CF86007566DC /* Localization.swift in Sources */,
 				A58EC2DE27F1CE7E007566DC /* SceneDelegate.swift in Sources */,
+				A58EC30427F1E66A007566DC /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
