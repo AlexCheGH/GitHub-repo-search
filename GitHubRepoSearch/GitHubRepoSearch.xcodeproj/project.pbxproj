@@ -119,6 +119,7 @@
 		A58EC2FA27F1D31B007566DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A58EC30727F1F99F007566DC /* RepositoryManager.swift */,
 				A58EC2FD27F1DBCB007566DC /* Network */,
 			);
 			path = Managers;
@@ -128,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				A58EC2FB27F1D324007566DC /* NetworkManager.swift */,
-				A58EC30727F1F99F007566DC /* RepositoryManager.swift */,
 				A58EC2FE27F1DDAB007566DC /* DataLoader.swift */,
 				A58EC30027F1DE3F007566DC /* Endpoint.swift */,
 			);

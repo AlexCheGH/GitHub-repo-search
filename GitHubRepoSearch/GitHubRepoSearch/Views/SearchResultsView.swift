@@ -97,6 +97,11 @@ class SearchResultsView: UIView {
         }
     }
     
+    
+    private func whenToUpdate() {
+        
+    }
+    
 }
 
 extension SearchResultsView: UITableViewDelegate, UITableViewDataSource {
@@ -113,6 +118,10 @@ extension SearchResultsView: UITableViewDelegate, UITableViewDataSource {
         
         cell.configureCell(title: title, ownerName: ownerName)
         cell.delegate = self
+        
+        if indexPath.row + 15 > model.count {
+            cellDelegate?.needMoreData(currentRow: indexPath.row)
+        }
         
         return cell
     }
@@ -133,6 +142,10 @@ extension SearchResultsView: UITextFieldDelegate {
 
 
 extension SearchResultsView: CellDelegate {
+    func needMoreData(currentRow: Int) {
+        cellDelegate?.needMoreData(currentRow: currentRow)
+    }
+    
     func onCellTap(title: String) {
         cellDelegate?.onCellTap(title: title)
     }
