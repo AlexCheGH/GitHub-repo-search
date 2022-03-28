@@ -16,9 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-y1-Gou">
+                                <rect key="frame" x="173.5" y="361.5" width="67" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-C2-HS0">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyJ-Ub-DCh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-cN-O6Z">
+                                        <rect key="frame" x="0.0" y="71" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="im0-Fn-pFc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-1b-oDI">
+                                        <rect key="frame" x="0.0" y="142" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SZL-to-61g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BG5-y1-Gou" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qw-lF-0DO"/>
+                            <constraint firstItem="BG5-y1-Gou" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hxk-yX-KEx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clutteredSpaceSearch" destination="swC-1b-oDI" id="Bgs-uG-Gmi"/>
+                        <outlet property="dropDownMenuSearch" destination="BF2-C2-HS0" id="thi-kC-W1J"/>
+                        <outlet property="fullScreenSearch" destination="YqL-cN-O6Z" id="1Tj-EZ-XBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

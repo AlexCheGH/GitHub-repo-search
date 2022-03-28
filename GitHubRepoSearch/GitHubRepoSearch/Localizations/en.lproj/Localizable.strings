@@ -9,4 +9,7 @@
 "git_hub" = "GitHub";
 "search" = "Search";
 
-
+//Buttons
+"drop_down_menu_button" = "Drop down search";
+"full_screen_search_button" = "Full screen search";
+"cluttered_screen_search_button" = "Cluttered screen search";
