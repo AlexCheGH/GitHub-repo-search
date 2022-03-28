@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  GitHubRepoSearch
+
+  Created by Aliaksandr Chekushkin on 3/28/22.
+  
+*/
+
+"git_hub" = "GitHub";
+"search" = "Search";
+
+
