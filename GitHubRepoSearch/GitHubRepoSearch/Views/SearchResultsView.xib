@@ -55,7 +55,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="bottonConstr" destination="0wP-r1-bSa" id="71m-Uz-VsF"/>
+                <outlet property="buttonBottomConstr" destination="0wP-r1-bSa" id="71m-Uz-VsF"/>
                 <outlet property="tableView" destination="g1a-tw-nHk" id="Dv0-pB-1sQ"/>
                 <outlet property="textFieldView" destination="a7I-JR-QJZ" id="QN0-0j-HRM"/>
             </connections>
