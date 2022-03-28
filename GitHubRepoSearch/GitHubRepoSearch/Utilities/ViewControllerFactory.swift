@@ -19,7 +19,6 @@ enum TypeOfViewController {
     case main
     case dropDownSearch
     case fullScreenSearch
-    case clutteredSpaceSearch
 }
 
 extension TypeOfViewController {
@@ -33,8 +32,6 @@ extension TypeOfViewController {
             return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.dropDownSearch.rawValue)
         case .fullScreenSearch:
             return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.fullScreenSearch.rawValue)
-        case .clutteredSpaceSearch:
-            return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.clutteredSearch.rawValue)
         }
     }
 }
@@ -53,5 +50,4 @@ fileprivate enum ViewControllerID: String {
     case main = "ViewController"
     case dropDownSearch = "DropDownSearchViewController"
     case fullScreenSearch = "FullScreenSearchViewController"
-    case clutteredSearch = "ClutteredScreenViewController"
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgF-uS-WTq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-y1-Gou">
-                                <rect key="frame" x="173.5" y="361.5" width="67" height="173"/>
+                                <rect key="frame" x="173.5" y="397" width="67" height="102"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-C2-HS0">
                                         <rect key="frame" x="0.0" y="0.0" width="67" height="31"/>
@@ -36,14 +36,6 @@
                                             <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="im0-Fn-pFc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swC-1b-oDI">
-                                        <rect key="frame" x="0.0" y="142" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="onButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SZL-to-61g"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -54,15 +46,67 @@
                             <constraint firstItem="BG5-y1-Gou" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hxk-yX-KEx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XBo-uK-cno"/>
                     <connections>
-                        <outlet property="clutteredSpaceSearch" destination="swC-1b-oDI" id="Bgs-uG-Gmi"/>
                         <outlet property="dropDownMenuSearch" destination="BF2-C2-HS0" id="thi-kC-W1J"/>
                         <outlet property="fullScreenSearch" destination="YqL-cN-O6Z" id="1Tj-EZ-XBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="83"/>
+            <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
+        </scene>
+        <!--Drop Down Search View Controller-->
+        <scene sceneID="bT3-a0-jIo">
+            <objects>
+                <viewController storyboardIdentifier="DropDownSearchViewController" id="SVf-qD-OMz" customClass="DropDownSearchViewController" customModule="GitHubRepoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPM-f4-Yzo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-S8-ZHC">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onButtonTap:" destination="SVf-qD-OMz" eventType="touchUpInside" id="sNO-0u-kQJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gWW-bv-U6F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gWW-bv-U6F" firstAttribute="bottom" secondItem="w9w-S8-ZHC" secondAttribute="bottom" constant="50" id="8Gy-fh-8et"/>
+                            <constraint firstItem="w9w-S8-ZHC" firstAttribute="leading" secondItem="gWW-bv-U6F" secondAttribute="leading" constant="50" id="LWn-9q-lLD"/>
+                            <constraint firstItem="gWW-bv-U6F" firstAttribute="trailing" secondItem="w9w-S8-ZHC" secondAttribute="trailing" constant="50" id="QYR-u7-jOh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lFg-01-XOk"/>
+                    <connections>
+                        <outlet property="popButton" destination="w9w-S8-ZHC" id="bpS-3p-KtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJX-yW-9Nz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="97F-9O-gbz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OgF-uS-WTq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XH8-zA-TKG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FKP-9V-IgY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKt-T6-MdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="82"/>
         </scene>
     </scenes>
     <resources>
