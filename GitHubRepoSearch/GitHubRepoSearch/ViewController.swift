@@ -39,16 +39,22 @@ class ViewController: UIViewController {
     
     @IBAction func onButtonTap(_ sender: UIButton) {
         
+        var viewController = UIViewController()
+        
         switch sender {
         case dropDownMenuSearch:
-            print("dropDownMenuSearch")
+            viewController = ViewControllerFactory.viewController(for: .dropDownSearch)
         case fullScreenSearch:
-            print("fullScreenSearch")
+            viewController = ViewControllerFactory.viewController(for: .fullScreenSearch)
         case clutteredSpaceSearch:
-            print("clutteredSpaceSearch")
+            viewController = ViewControllerFactory.viewController(for: .clutteredSpaceSearch)
         default:
             return
         }
+        
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true, completion: nil)
+        
     }
 }
 

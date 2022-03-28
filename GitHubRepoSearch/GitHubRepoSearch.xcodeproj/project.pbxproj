@@ -21,6 +21,7 @@
 		A58EC30427F1E66A007566DC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30327F1E66A007566DC /* Model.swift */; };
 		A58EC30627F1E971007566DC /* RawRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */; };
 		A58EC30827F1F99F007566DC /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30727F1F99F007566DC /* RepositoryManager.swift */; };
+		A58EC30B27F20210007566DC /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC30A27F20210007566DC /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A58EC30327F1E66A007566DC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawRepositoriesModel.swift; sourceTree = "<group>"; };
 		A58EC30727F1F99F007566DC /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
+		A58EC30A27F20210007566DC /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				A58EC2DB27F1CE7E007566DC /* AppDelegate.swift */,
 				A58EC2EF27F1CECB007566DC /* Localizations */,
 				A58EC2DD27F1CE7E007566DC /* SceneDelegate.swift */,
+				A58EC30927F201FA007566DC /* Utilities */,
 				A58EC30227F1E661007566DC /* Model */,
 				A58EC2FA27F1D31B007566DC /* Managers */,
 				A58EC2DF27F1CE7E007566DC /* ViewController.swift */,
@@ -124,6 +127,14 @@
 				A58EC30527F1E971007566DC /* RawRepositoriesModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A58EC30927F201FA007566DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A58EC30A27F20210007566DC /* ViewControllerFactory.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				A58EC2DE27F1CE7E007566DC /* SceneDelegate.swift in Sources */,
 				A58EC30427F1E66A007566DC /* Model.swift in Sources */,
 				A58EC30827F1F99F007566DC /* RepositoryManager.swift in Sources */,
+				A58EC30B27F20210007566DC /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
