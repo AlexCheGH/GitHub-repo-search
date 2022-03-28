@@ -39,7 +39,7 @@ class CompactTableViewCell: UITableViewCell {
         setupLabels(title: title, ownerName: ownerName)
     }
     
-    
+    //Delegate method
     @objc private func onCellTap() {
         guard let title = title else { return }
         delegate?.onCellTap(title: title)

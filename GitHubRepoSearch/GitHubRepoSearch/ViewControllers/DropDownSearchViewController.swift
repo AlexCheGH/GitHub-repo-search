@@ -30,7 +30,6 @@ class DropDownSearchViewController: UIViewController {
             .sink(receiveValue: { model in
                 guard let model = model, let items = model.items else { return }
                 self.searchView.refreshView(with: items)
-                self.searchView.configureTableView()
             })
     }
     
@@ -56,27 +55,3 @@ extension DropDownSearchViewController: SearchResultViewDelegate {
         manager.refreshModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 30, pageNumber: 1)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//       configureButton()
-//    }
-
-//    private func configureButton() {
-//        popButton.setTitle(Localization.Buttons.exitButton, for: .normal)
-//    }
-//
-//    @IBAction func onButtonTap(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-//
