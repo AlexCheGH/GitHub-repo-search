@@ -46,7 +46,11 @@ class DropDownSearchViewController: UIViewController {
 
 extension DropDownSearchViewController: CellDelegate {
     func onCellTap(title: String) {
-        
+        let link = manager.getRepoLink(for: title)
+        guard let link = link, let url = URL(string: link) else { return }
+
+        let alert = AlertViewController.externalLinkAlert(url: url)
+        navigationController?.present(alert, animated: true, completion: nil)
     }
 }
 
