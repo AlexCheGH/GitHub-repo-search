@@ -43,7 +43,7 @@ struct UserPreferences {
         let key = UserDefaultsKeys.resultsPerPage.rawValue
         let value = UserDefaults().integer(forKey: key)
         
-        if value == 0 { return 15 }
+        if value == 0 { return 10 }
         else { return value }
         
     }
