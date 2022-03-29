@@ -10,6 +10,18 @@
 "git_hub" = "GitHub";
 "search" = "Search";
 "alert" = "Alert";
+"order_by" = "Order by";
+"sort_by" = "Sort by";
+"results_per_page" = "Results per page";
+
+"stars" = "stars";
+"forks" = "forks";
+"updates" = "updates";
+"help_wanted_issues" = "help wanted";
+"best_match" = "match";
+
+"desc" = "descending";
+"asc" = "ascending";
 
 //Buttons
 "drop_down_menu_button" = "Drop down search";

@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-JR-QJZ">
-                            <rect key="frame" x="8" y="8" width="398" height="35"/>
+                            <rect key="frame" x="8" y="8" width="343" height="35"/>
                             <color key="tintColor" name="AccentColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="zps-tn-FkX"/>
@@ -32,12 +32,26 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YQ-8E-a29">
+                            <rect key="frame" x="361" y="8" width="45" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="NNi-rT-RH6"/>
+                                <constraint firstAttribute="height" constant="35" id="mOi-X0-ERE"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="gear" catalog="system"/>
+                            <connections>
+                                <action selector="onSettingsButtonTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="UEg-lN-lhd"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="a7I-JR-QJZ" secondAttribute="trailing" constant="8" id="5gf-QS-1wc"/>
                         <constraint firstItem="a7I-JR-QJZ" firstAttribute="leading" secondItem="a5L-uD-TQ6" secondAttribute="leading" constant="8" id="9ga-rG-biA"/>
                         <constraint firstItem="a7I-JR-QJZ" firstAttribute="top" secondItem="a5L-uD-TQ6" secondAttribute="top" constant="8" id="MlY-eI-dxN"/>
+                        <constraint firstItem="3YQ-8E-a29" firstAttribute="top" secondItem="a5L-uD-TQ6" secondAttribute="top" constant="8" id="TEQ-vg-cXc"/>
+                        <constraint firstAttribute="trailing" secondItem="3YQ-8E-a29" secondAttribute="trailing" constant="8" id="a5o-kp-0mU"/>
+                        <constraint firstItem="3YQ-8E-a29" firstAttribute="leading" secondItem="a7I-JR-QJZ" secondAttribute="trailing" constant="10" id="vE2-fa-DwS"/>
                         <constraint firstAttribute="bottom" secondItem="a7I-JR-QJZ" secondAttribute="bottom" constant="8" id="yBU-VY-svt"/>
                     </constraints>
                 </view>
@@ -56,6 +70,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="buttonBottomConstr" destination="0wP-r1-bSa" id="71m-Uz-VsF"/>
+                <outlet property="settingsButton" destination="3YQ-8E-a29" id="Yyb-0k-66K"/>
                 <outlet property="tableView" destination="g1a-tw-nHk" id="Dv0-pB-1sQ"/>
                 <outlet property="textFieldView" destination="a7I-JR-QJZ" id="QN0-0j-HRM"/>
             </connections>
@@ -63,6 +78,7 @@
         </view>
     </objects>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

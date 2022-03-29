@@ -9,6 +9,7 @@ import UIKit
 
 protocol SearchResultViewDelegate {
     func didSendQuery(query: String)
+    func settingsButtonTapped()
 }
 
 class SearchResultsView: UIView {
@@ -17,6 +18,7 @@ class SearchResultsView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textFieldView: UITextField!
+    @IBOutlet weak var settingsButton: UIButton!
     
     var cellDelegate: CellDelegate?
     var delegate: SearchResultViewDelegate?
@@ -30,9 +32,15 @@ class SearchResultsView: UIView {
     }
     
     func configureView() {
+        settingsButton.setTitle("", for: .normal)
         addKeyboardObservers()
         configureTableView()
         configureTextField()
+    }
+    
+    
+    @IBAction func onSettingsButtonTap(_ sender: UIButton) {
+        delegate?.settingsButtonTapped()
     }
     
     

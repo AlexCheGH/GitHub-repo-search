@@ -18,6 +18,7 @@ struct StoryboardRepresentation {
 enum TypeOfViewController {
     case main
     case dropDownSearch
+    case searchSettings
 }
 
 extension TypeOfViewController {
@@ -29,6 +30,8 @@ extension TypeOfViewController {
             return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.main.rawValue)
         case .dropDownSearch:
             return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.dropDownSearch.rawValue)
+        case .searchSettings:
+            return StoryboardRepresentation(bundle: nil, storyboardName: mainStoryboard, viewControllerID: ViewControllerID.searchSettings.rawValue)
         }
     }
 }
@@ -46,4 +49,5 @@ class ViewControllerFactory: NSObject {
 fileprivate enum ViewControllerID: String {
     case main = "ViewController"
     case dropDownSearch = "DropDownSearchViewController"
+    case searchSettings = "SearchSettingsViewController"
 }

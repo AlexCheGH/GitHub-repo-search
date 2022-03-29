@@ -29,6 +29,10 @@
 		A58EC32027F215A1007566DC /* CompactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58EC31E27F215A1007566DC /* CompactTableViewCell.xib */; };
 		A58EC32327F221B7007566DC /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32227F221B7007566DC /* CellDelegate.swift */; };
 		A58EC32527F2599E007566DC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32427F2599E007566DC /* AlertViewController.swift */; };
+		A58EC32727F2F989007566DC /* SearchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32627F2F989007566DC /* SearchSettingsViewController.swift */; };
+		A58EC32B27F2FB32007566DC /* SearchSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32A27F2FB32007566DC /* SearchSettingsView.swift */; };
+		A58EC32D27F2FB3D007566DC /* SearchSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58EC32C27F2FB3D007566DC /* SearchSettingsView.xib */; };
+		A58EC32F27F30744007566DC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EC32E27F30744007566DC /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		A58EC31E27F215A1007566DC /* CompactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactTableViewCell.xib; sourceTree = "<group>"; };
 		A58EC32227F221B7007566DC /* CellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
 		A58EC32427F2599E007566DC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		A58EC32627F2F989007566DC /* SearchSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingsViewController.swift; sourceTree = "<group>"; };
+		A58EC32A27F2FB32007566DC /* SearchSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingsView.swift; sourceTree = "<group>"; };
+		A58EC32C27F2FB3D007566DC /* SearchSettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSettingsView.xib; sourceTree = "<group>"; };
+		A58EC32E27F30744007566DC /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A58EC30727F1F99F007566DC /* RepositoryManager.swift */,
+				A58EC32E27F30744007566DC /* UserDefaultsManager.swift */,
 				A58EC2FD27F1DBCB007566DC /* Network */,
 			);
 			path = Managers;
@@ -158,6 +167,7 @@
 				A58EC32427F2599E007566DC /* AlertViewController.swift */,
 				A58EC2DF27F1CE7E007566DC /* ViewController.swift */,
 				A58EC30D27F203AF007566DC /* DropDownSearchViewController.swift */,
+				A58EC32627F2F989007566DC /* SearchSettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,8 +175,8 @@
 		A58EC31327F20B22007566DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A58EC31127F20B19007566DC /* SearchResultsView.swift */,
-				A58EC31427F20B66007566DC /* SearchResultsView.xib */,
+				A58EC32927F2FB18007566DC /* SearchSettingsView */,
+				A58EC32827F2FAAA007566DC /* SearchResultsView */,
 				A58EC32127F22190007566DC /* TableViewCells */,
 			);
 			path = Views;
@@ -188,6 +198,24 @@
 				A58EC32227F221B7007566DC /* CellDelegate.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		A58EC32827F2FAAA007566DC /* SearchResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				A58EC31427F20B66007566DC /* SearchResultsView.xib */,
+				A58EC31127F20B19007566DC /* SearchResultsView.swift */,
+			);
+			path = SearchResultsView;
+			sourceTree = "<group>";
+		};
+		A58EC32927F2FB18007566DC /* SearchSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A58EC32A27F2FB32007566DC /* SearchSettingsView.swift */,
+				A58EC32C27F2FB3D007566DC /* SearchSettingsView.xib */,
+			);
+			path = SearchSettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +279,7 @@
 			files = (
 				A58EC2E827F1CE7F007566DC /* LaunchScreen.storyboard in Resources */,
 				A58EC32027F215A1007566DC /* CompactTableViewCell.xib in Resources */,
+				A58EC32D27F2FB3D007566DC /* SearchSettingsView.xib in Resources */,
 				A58EC2F227F1CEFB007566DC /* Localizable.strings in Resources */,
 				A58EC31527F20B66007566DC /* SearchResultsView.xib in Resources */,
 				A58EC2E527F1CE7F007566DC /* Assets.xcassets in Resources */,
@@ -270,8 +299,11 @@
 				A58EC30627F1E971007566DC /* RawRepositoriesModel.swift in Sources */,
 				A58EC2DC27F1CE7E007566DC /* AppDelegate.swift in Sources */,
 				A58EC2FF27F1DDAB007566DC /* DataLoader.swift in Sources */,
+				A58EC32F27F30744007566DC /* UserDefaultsManager.swift in Sources */,
 				A58EC2FC27F1D324007566DC /* NetworkManager.swift in Sources */,
 				A58EC2F927F1CF86007566DC /* Localization.swift in Sources */,
+				A58EC32B27F2FB32007566DC /* SearchSettingsView.swift in Sources */,
+				A58EC32727F2F989007566DC /* SearchSettingsViewController.swift in Sources */,
 				A58EC32327F221B7007566DC /* CellDelegate.swift in Sources */,
 				A58EC30E27F203AF007566DC /* DropDownSearchViewController.swift in Sources */,
 				A58EC31227F20B19007566DC /* SearchResultsView.swift in Sources */,

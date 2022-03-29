@@ -59,7 +59,13 @@ extension DropDownSearchViewController: CellDelegate {
 }
 
 extension DropDownSearchViewController: SearchResultViewDelegate {
+    func settingsButtonTapped() {
+        let vc = ViewControllerFactory.viewController(for: .searchSettings) as! SearchSettingsViewController
+        
+        navigationController?.present(vc, animated: true, completion: nil)
+    }
+    
     func didSendQuery(query: String) {
-        manager.loadModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 20, pageNumber: 1)
+        manager.loadModel(matching: query, pageNumber: 1)
     }
 }
