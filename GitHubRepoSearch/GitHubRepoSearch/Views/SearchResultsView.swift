@@ -21,8 +21,7 @@ class SearchResultsView: UIView {
     var cellDelegate: CellDelegate?
     var delegate: SearchResultViewDelegate?
     private var tableViewContrHeight: CGFloat = 0
-        
-    var model: [Item] = []
+    private var model: [Item] = []
     
     static func loadViewFromNib() -> SearchResultsView {
         let bundle = Bundle(for: self)
@@ -31,13 +30,9 @@ class SearchResultsView: UIView {
     }
     
     func configureView() {
-         
-        
-        
         addKeyboardObservers()
         configureTableView()
         configureTextField()
-
     }
     
     
@@ -65,19 +60,17 @@ class SearchResultsView: UIView {
     //table view refresh handling. Once new data is recieved - refresh table view
     func refreshView(with model: [Item]) {
         self.model = model
-        reloadTableView()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         configureTableView()
-    }
-    
-    private func reloadTableView() {
-        tableView.reloadData()
     }
     
     private func configureTextField() {
         textFieldView.delegate = self
     }
     
-   private func configureTableView() {
+    private func configureTableView() {
         
         if !model.isEmpty {
             tableView.delegate = self
@@ -96,7 +89,6 @@ class SearchResultsView: UIView {
             self.layoutIfNeeded()
         }
     }
-    
 }
 
 extension SearchResultsView: UITableViewDelegate, UITableViewDataSource {
@@ -113,6 +105,10 @@ extension SearchResultsView: UITableViewDelegate, UITableViewDataSource {
         
         cell.configureCell(title: title, ownerName: ownerName)
         cell.delegate = self
+        
+        if indexPath.row == model.count - 5 {
+            cellDelegate?.needMoreData(currentRow: indexPath.row)
+        }
         
         return cell
     }
@@ -133,6 +129,10 @@ extension SearchResultsView: UITextFieldDelegate {
 
 
 extension SearchResultsView: CellDelegate {
+    func needMoreData(currentRow: Int) {
+        cellDelegate?.needMoreData(currentRow: currentRow)
+    }
+    
     func onCellTap(title: String) {
         cellDelegate?.onCellTap(title: title)
     }

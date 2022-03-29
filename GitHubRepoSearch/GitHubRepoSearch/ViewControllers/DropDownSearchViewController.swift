@@ -15,7 +15,7 @@ class DropDownSearchViewController: UIViewController {
     let searchView = SearchResultsView.loadViewFromNib()
     let manager = RepositoryManager()
     var subscriber: AnyCancellable?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +45,10 @@ class DropDownSearchViewController: UIViewController {
 }
 
 extension DropDownSearchViewController: CellDelegate {
+    func needMoreData(currentRow: Int) {
+        manager.getMoreEntries()
+    }
+    
     func onCellTap(title: String) {
         let link = manager.getRepoLink(for: title)
         guard let link = link, let url = URL(string: link) else { return }
@@ -56,6 +60,6 @@ extension DropDownSearchViewController: CellDelegate {
 
 extension DropDownSearchViewController: SearchResultViewDelegate {
     func didSendQuery(query: String) {
-        manager.refreshModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 30, pageNumber: 1)
+        manager.loadModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 20, pageNumber: 1)
     }
 }

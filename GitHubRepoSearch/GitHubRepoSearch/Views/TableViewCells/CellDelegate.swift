@@ -10,4 +10,5 @@ import Foundation
 
 protocol CellDelegate {
     func onCellTap(title: String)
+    func needMoreData(currentRow: Int)
 }
