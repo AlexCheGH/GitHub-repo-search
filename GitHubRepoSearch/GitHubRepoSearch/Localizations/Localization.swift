@@ -13,6 +13,18 @@ struct Localization {
         static let github = NSLocalizedString("git_hub", comment: "")
         static let search = NSLocalizedString("search", comment: "")
         static let alert = NSLocalizedString("Alert", comment: "")
+        
+        static let orderBy = NSLocalizedString("order_by", comment: "")
+        static let sortBy = NSLocalizedString("sort_by", comment: "")
+        static let resultPerPage = NSLocalizedString("results_per_page", comment: "")
+        static let stars = NSLocalizedString("stars", comment: "")
+        static let forks = NSLocalizedString("forks", comment: "")
+        static let updates = NSLocalizedString("updates", comment: "")
+        static let helpWanted = NSLocalizedString("help_wanted_issues", comment: "")
+        static let bestMatch = NSLocalizedString("best_match", comment: "")
+        static let descending = NSLocalizedString("desc", comment: "")
+        static let ascending = NSLocalizedString("asc", comment: "")
+        
     }
     
     struct Buttons {

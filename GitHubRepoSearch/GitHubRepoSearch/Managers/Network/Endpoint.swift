@@ -52,17 +52,15 @@ enum QueryName: String {
 }
 
 
-enum Sorting: String {
-    case numberOfStars = "stars"
+enum Sorting: String, CaseIterable {
     case numberOfForks = "forks"
-    case recency = "updated"
-    case helpWantedIssues = "help-wanted-issues"
     case bestMatch = "bestmatch"
-    
+    case numberOfStars = "stars"
+    case recency = "updated"
 }
 
 
-enum Order: String {
+enum Order: String, CaseIterable {
     case descending = "desc"
     case ascending = "asc"
 }

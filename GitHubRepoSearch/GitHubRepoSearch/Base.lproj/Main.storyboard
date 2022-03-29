@@ -78,6 +78,36 @@
             </objects>
             <point key="canvasLocation" x="1716" y="82"/>
         </scene>
+        <!--Search Settings View Controller-->
+        <scene sceneID="Uyc-0c-GuI">
+            <objects>
+                <viewController storyboardIdentifier="SearchSettingsViewController" id="JXA-UJ-ntC" customClass="SearchSettingsViewController" customModule="GitHubRepoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5QX-vw-MVY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyg-ff-It7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dRa-1W-eVL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lyg-ff-It7" firstAttribute="top" secondItem="dRa-1W-eVL" secondAttribute="top" id="6ox-fd-JvF"/>
+                            <constraint firstItem="dRa-1W-eVL" firstAttribute="bottom" secondItem="lyg-ff-It7" secondAttribute="bottom" id="Ree-EP-BWP"/>
+                            <constraint firstItem="dRa-1W-eVL" firstAttribute="trailing" secondItem="lyg-ff-It7" secondAttribute="trailing" id="ao6-xa-RkU"/>
+                            <constraint firstItem="lyg-ff-It7" firstAttribute="leading" secondItem="dRa-1W-eVL" secondAttribute="leading" id="fQB-zx-dN2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="lyg-ff-It7" id="UrT-29-LRq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjt-A2-cCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="82"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="97F-9O-gbz">
             <objects>
