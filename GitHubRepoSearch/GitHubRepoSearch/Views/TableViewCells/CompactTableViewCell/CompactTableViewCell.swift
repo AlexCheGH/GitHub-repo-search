@@ -47,7 +47,7 @@ class CompactTableViewCell: UITableViewCell {
     
     private func setupLabels(title: String?, ownerName: String?) {
         titleLabel.text = title
-        starsLabel.text = "👤" + (ownerName ?? "")
+        starsLabel.text = (ownerName ?? "") + "👤"
     }
     
 }
