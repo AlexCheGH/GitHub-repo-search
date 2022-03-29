@@ -15,7 +15,7 @@ class DropDownSearchViewController: UIViewController {
     let searchView = SearchResultsView.loadViewFromNib()
     let manager = RepositoryManager()
     var subscriber: AnyCancellable?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +60,6 @@ extension DropDownSearchViewController: CellDelegate {
 
 extension DropDownSearchViewController: SearchResultViewDelegate {
     func didSendQuery(query: String) {
-        manager.loadModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 50, pageNumber: 1)
+        manager.loadModel(matching: query, sortedBy: .bestMatch, order: .descending, perPage: 20, pageNumber: 1)
     }
 }

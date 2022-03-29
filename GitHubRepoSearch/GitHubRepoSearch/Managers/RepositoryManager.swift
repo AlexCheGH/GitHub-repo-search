@@ -13,10 +13,11 @@ class RepositoryManager {
     @Published private var model: RepositoryRequest?
     private var networkManager = NetworkManager()
     
+    //Need the values for infinite scroll
     private var matching: String?
     private var sortedBy: Sorting = .bestMatch
     private var order: Order = .descending
-    private let perpage = 50
+    private let perpage = 30
     private var pageNumber = 1
     
     
@@ -39,12 +40,11 @@ class RepositoryManager {
         }
     }
     
-    func getMoreEntries() {        
+    func getMoreEntries() {
         guard let matching = matching else { return }
-
+        
         networkManager.findRepositories(matching: matching, sortedBy: self.sortedBy, order: self.order) { value in
             value?.items?.forEach{ self.model?.items?.append($0)
-                print("Appending \($0)")
             }
             self.model = self.model
         }
