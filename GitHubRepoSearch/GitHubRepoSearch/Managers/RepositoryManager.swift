@@ -29,6 +29,7 @@ class RepositoryManager {
         self.pageNumber = pageNumber
         self.pageNumber += 1
         
+        self.userPreference = UserPreferences() //applies any changes to prefs
         let sortBy = userPreference.sortBy
         let order = userPreference.orderBy
         let perPage = userPreference.resultsPerPage
@@ -43,6 +44,7 @@ class RepositoryManager {
     func getMoreEntries() {
         guard let matching = matching else { return }
         
+        self.userPreference = UserPreferences() //applies any changes to prefs
         let sortBy = userPreference.sortBy
         let order = userPreference.orderBy
         

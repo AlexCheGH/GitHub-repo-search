@@ -90,7 +90,7 @@ class SearchSettingsView: UIView {
     }
     
     private func configureResultsPerPageSlider(sliderValue: Int) {
-        resultsPerPageSlider.maximumValue = minSliderValue
+        resultsPerPageSlider.minimumValue = minSliderValue
         resultsPerPageSlider.maximumValue = maxSliderValue
         
         resultsPerPageSlider.value = Float(sliderValue)
