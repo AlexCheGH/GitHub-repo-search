@@ -52,7 +52,7 @@ class SearchResultsView: UIView {
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if buttonBottomConstr.constant == 0 || model.isEmpty {
+            if buttonBottomConstr.constant == 0 {
                 buttonBottomConstr.constant = keyboardSize.height
                 tableViewContrHeight = keyboardSize.height
             }
@@ -60,8 +60,10 @@ class SearchResultsView: UIView {
     }
     
     @objc private func keyboardWillHide(notification: NSNotification) {
-        if buttonBottomConstr.constant != 0 && !model.isEmpty{
+        if buttonBottomConstr.constant != 0 {
             buttonBottomConstr.constant = 0
+            self.tableViewContrHeight = 0
+            
         }
     }
     
